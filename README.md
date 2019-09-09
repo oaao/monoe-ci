@@ -1,6 +1,6 @@
 # monoe-ci
 
-A basic continuous integration system written in Python from reference.
+A basic continuous integration system written in Python from reference examples.
 
 
 ## introduction
