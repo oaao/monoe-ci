@@ -18,6 +18,8 @@ Each component process should on its own networked machine. For a CI system, [mo
 
 * test discovery is arbitrarily limited to tests that exist in `{repository}/tests/`
 
+* tests run against the latest new commit only, not each new commit since last known
+
 * an observer model & local repos will be used instead of post-commit external hooks and remote repos
 
 * instead of a `reporter` component, results will be dumped to a file local to the `dispatcher` process
