@@ -7,9 +7,20 @@ A basic continuous integration system written in Python from reference.
 
 `monoe-ci` bases on the loose analogy of a monoecious flower. [ --> [design](./DESIGN.md) ]
 
-It implements a repository `monitor`, a task `dispatcher`, and a `test runner`. However, they each run as independent processes and communicate through sockets (to better manage load, and to be fault-tolerant).
+It implements a repository `monitor`, a task `dispatcher`, and a `test runner`; however, they each run as independent processes and communicate through sockets (to better manage load, and to be fault-tolerant).
 
 Each component process should on its own networked machine. For a CI system, [monoecy](https://vimeo.com/219945413) is a useful design metaphor but totally counterproductive to literalize into its deployment and usage.
+
+
+## current limitations
+
+* acts on `git` repositories only
+
+* test discovery is arbitrarily limited to tests that exist in `{repository}/tests/`
+
+* an observer model & local repos will be used instead of post-commit external hooks and remote repos
+
+* instead of a `reporter` component, results will be dumped to a file local to the `dispatcher` process
 
 
 ## references
