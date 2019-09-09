@@ -3,6 +3,7 @@ import os
 import socket
 import subprocess
 
+
 def _get_args():
 
     parser = argparse.ArgumentParser()
@@ -47,9 +48,6 @@ def _dispatch(host, port):
             print(f'Dispatched to {host}:{port}')
         else:
             raise Exception(f'Could not dispatch test: {resp}')
-
-
-
 
 
 def poll_repo(args):
