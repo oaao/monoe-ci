@@ -2,6 +2,8 @@
 
 A basic continuous integration system written in Python from reference examples.
 
+(currently, it's horrible)
+
 
 ## introduction
 
