@@ -2,7 +2,7 @@
 
 To implement a 'monoecious' CI system:
 
-## component
+## components
 
 A **monitor** object, which performs the following actions:
 
@@ -14,3 +14,10 @@ A **monitor** object, which performs the following actions:
 - notify dispatcher component upon observing change, and provide dispatcher with the newest commit ID
 ```
 
+A **dispatcher** object, which performs the following actions:
+
+```
+- listen for external requests from both monitors and test runners
+- allow test runners to 'register' themselves
+- given a commit ID from a monitor subprocess, dispatch a test runner against that new commit
+- reassign the given commit ID to a new test runner if a previous runner crashed etc.
